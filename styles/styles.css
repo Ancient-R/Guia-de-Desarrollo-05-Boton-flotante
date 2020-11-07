@@ -1,0 +1,81 @@
+body{
+    margin: 0;
+    background-color: #f3f3f3;
+}
+
+.title{
+    text-align: center;
+}
+
+.article{
+    padding: 20px;
+}
+
+.article-title{
+    font-size: 24px;
+}
+
+/*  Contenedores  */
+
+.floating-buttons,
+.hide-buttons{ 
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.floating-buttons{
+    width: 100px;
+    height: 200px;
+    right: 0;
+    bottom: -50px;
+}
+
+.hide-buttons{
+    clip-path: inset(100% 0 0 0);
+    transition: clip-path .4s ease;
+    width: 80px;
+    height: 120px;
+    margin-bottom: 90px;
+}
+
+/*  Botones */
+.floating-button,
+.hide-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    background-color: #15a350;
+    outline: none;
+    font-size: 28px;
+    color: #fff;
+    transition: background-color .5s ease, transform .5s ease;
+}
+
+.floating-button{
+    width: 60px;
+    height: 60px;
+}
+
+.hide-button{
+    width: 50px;
+    height: 50px;
+}
+
+.buttons--show{
+    clip-path: inset(0 0 0 0);
+}
+
+@media screen and (min-width: 1024px){
+    .floating-button:hover,
+    .hide-button:hover{
+        background-color: #2eaa62;
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+}
